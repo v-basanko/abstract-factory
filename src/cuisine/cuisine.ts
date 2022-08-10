@@ -7,6 +7,7 @@ import { Lunch } from '../lunch/lunch';
 
 export abstract class Cuisine implements ICuisine {
   country: string;
+  menu: Array<DishesTypes>;
 
   cookLunch(): ILunch {
     return new Lunch(
@@ -28,6 +29,6 @@ export abstract class Cuisine implements ICuisine {
   }
 
   getMenu(): Array<DishesTypes> {
-    return [];
+    return this.menu;
   }
 }

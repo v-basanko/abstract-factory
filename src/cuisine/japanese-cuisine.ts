@@ -1,14 +1,10 @@
-import { ICuisine } from '../shared/interfaces/cuisine.interface';
 import { Cuisine } from './cuisine';
 import { DishesTypes } from '../shared/enums/dishes-types';
 
-export class JapaneseCuisine extends Cuisine implements ICuisine {
+export class JapaneseCuisine extends Cuisine {
   constructor() {
     super();
     this.country = 'Japan';
-  }
-
-  getMenu(): Array<DishesTypes> {
-    return [DishesTypes.RISE, DishesTypes.FISH, DishesTypes.TEA];
+    this.menu = [DishesTypes.RISE, DishesTypes.FISH, DishesTypes.TEA];
   }
 }
